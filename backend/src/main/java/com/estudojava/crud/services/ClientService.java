@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.estudojava.crud.entities.Client;
+import com.estudojava.crud.dto.ClientDTO;
 import com.estudojava.crud.repositories.ClientRepository;
 
 @Service
@@ -16,7 +16,7 @@ public class ClientService {
 	private ClientRepository repository;
 	
 	@Transactional(readOnly = true)
-	public List<Client> findAll() {
+	public List<ClientDTO> findAll() {
 		return repository.findAll();
 	}
 }
